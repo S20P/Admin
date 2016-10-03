@@ -48,7 +48,7 @@ app.controller("unsplashcontroller", function ($scope, $http,Upload) {
 				});
 		}
 	}
-$scope.uploadFileToUrl = function() {
+     /*$scope.uploadFileToUrl = function() {
 	
 	console.log("alldataalldata", alldata[0].urls.thumb);
 	 var fdata = new FormData();
@@ -56,7 +56,7 @@ $scope.uploadFileToUrl = function() {
     for (i = 0; i < alldata.length; i++) {
       
       Upload.upload({
-        url: 'http://localhost:3000/upload',
+        url: 'https://github.com/mesatish/Admin/tree/',
         params: fdata,
         progress: function(e){}
       }).then(function(data, status, headers, config) {
@@ -85,5 +85,5 @@ $scope.uploadFileToUrl = function() {
 			function errorCallback(response) {
 				console.log("Error", response);
 			});
-	}
+	}*/
 });
