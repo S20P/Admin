@@ -1,0 +1,39 @@
+<html ng-app="myunsplashApp">
+<head>
+<script src="angular123.js"></script>
+<script src="index.js"></script>
+   
+	<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+	<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+
+</head>
+<body ng-controller="unsplashcontroller">
+
+  
+  <div>
+   <input type="button" ng-click="getphoto()">Click to get Unsplash Photo Details</button>
+  
+  </div>
+ 	 <table class="table table-full m-b-60" id="table-area-1" fsm-big-data="data of data take 30" border="2">
+        <thead>
+        <tr fsm-sticky-header scroll-body="'#table-area-1'" scroll-stop="64" bgcolor="#FFFF99">
+			 <th>id</th>
+			
+			 <th>urls</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng:repeat="(key, item) in data" ng-click="item.selected=!item.selected"  ng-dblclick="editItem(item)" bgcolor="#FFFFCC">
+                  <td>{{ item.id }}</td>
+			     
+			      <td>{{ item.urls.thumb }}</td>
+					    
+          </tr>
+        </tbody>
+      </table>
+	  
+	  <button ng-click="download()">Download</button>
+    <button ng-click="uploadFileToUrl()">upload</button>
+    
+</body>
+</html>
